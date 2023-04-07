@@ -1,16 +1,34 @@
 <template>
-  <button class="w-button">
+  <button :class="['w-button', { reverse: iconPosition === 'right' }]">
+    <GIcon v-if="icon" v-bind="$attrs" :icon="icon" class="w-button-icon" />
     <span class="w-button-label">{{ label }}</span>
   </button>
 </template>
 
 <script>
+import GIcon from '../Icon/index.vue'
 export default {
+  components: {
+    GIcon
+  },
   props: {
     label: {
       type: String,
       default: '提交'
+    },
+    icon: {
+      type: String
+    },
+    iconPosition: {
+      type: String,
+      default: 'left',
+      validator: function (value) {
+        return ['left', 'right'].includes(value)
+      }
     }
+  },
+  data() {
+    return {}
   }
 }
 </script>
@@ -46,6 +64,17 @@ export default {
     }
     &-label {
       order: 2;
+    }
+  }
+
+  &.reverse {
+    .w-button-icon {
+      order: 2;
+      margin-right: 0;
+      margin-left: 0.3em;
+    }
+    .w-button-label {
+      order: 1;
     }
   }
 }
