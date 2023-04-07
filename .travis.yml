@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - '14'
+  - '18'
+  - '12'
+addons:
+  chrome: stable
+sudo: required
