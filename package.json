@@ -6,9 +6,8 @@
     "start": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test2": "vue-cli-service test:unit",
-    "test": "jest --watchAll",
-    "coverage": "vue-cli-service test:unit --coverage"
+    "test": "jest",
+    "test-watch": "jest --watchAll"
   },
   "homepage": "https://github.com/zhangwh754/vue2-wheel",
   "dependencies": {
