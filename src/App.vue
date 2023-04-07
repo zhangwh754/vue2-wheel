@@ -1,15 +1,18 @@
 <template>
   <div id="app">
-    <h2>Hello World</h2>
+    <Button />
+    <Button label="你好" />
   </div>
 </template>
 
 <script>
+import Button from './components/Button'
+
 export default {
   name: 'App',
-  data() {
-    return {}
-  }
+  components: {
+    Button,
+  },
 }
 </script>
 
