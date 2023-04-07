@@ -31,6 +31,8 @@ export default {
   },
   methods: {
     btnClick() {
+      console.log('test');
+
       this.loading2 = false
       this.loading3 = false
 
