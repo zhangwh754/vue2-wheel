@@ -10,6 +10,7 @@
     "test": "jest --watchAll",
     "coverage": "vue-cli-service test:unit --coverage"
   },
+  "homepage": "https://github.com/zhangwh754/vue2-wheel",
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^2.6.14"
